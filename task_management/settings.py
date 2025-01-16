@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zu5rd3_m81y1#$_*j^k=2q-*%de7^&tat9c9tq3%1--&q5xgds'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pmfe.ir' , 'www.pmfe.ir']
 
 
 # Application definition
@@ -79,8 +79,13 @@ WSGI_APPLICATION = 'task_management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'task',
+        'USER': 'task',
+        'PASSWORD': 'peyman1371',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    
     }
 }
 
